@@ -1,132 +1,78 @@
-# 🧪 Testes de Python 
+# 🐍 Desafio de Testes em Python
 
-## 🎯 Objetivo
-
-Avaliar a familiaridade do desenvolvedor com os principais fundamentos da linguagem Python, incluindo:
+Este repositório contém a resolução de 5 testes propostos com o objetivo de avaliar o domínio da linguagem Python, incluindo:
 
 - Sintaxe básica
 - Manipulação de strings e listas
-- Estruturas de decisão (`if/else`)
-- Laços de repetição (`for`, `while`)
+- Estruturas de decisão
+- Laços de repetição
 - Definição de funções
 - Lógica de programação
 
 ---
 
-## ✅ Instruções
+## ✅ Testes Realizados
 
-1. Resolva cada exercício criando uma função conforme o enunciado.
-2. Use apenas **Python puro** (sem bibliotecas externas).
-3. Sinta-se à vontade para testar suas funções com `print()` ou `assert`.
-4. Escreva um código claro, legível e bem estruturado.
+### 🧪 1. Verificador de Palíndromos
+
+**Função:** `eh_palindromo(texto)`
+
+Verifica se uma string é um palíndromo, ignorando espaços e diferenças entre maiúsculas e minúsculas.
+
+📄 Arquivo: [`palindromo.py`](palindromo.py)
 
 ---
 
-## 🧪 Teste 1 – Verificador de Palíndromos
+### 🧪 2. Contador de Vogais
 
-**Função esperada:** `eh_palindromo(texto)`
+**Função:** `contar_vogais(frase)`
 
-**Descrição:**  
-Verifica se uma string é um palíndromo, ignorando espaços e diferenças entre maiúsculas/minúsculas.
+Conta quantas vogais existem em uma frase, incluindo acentuadas. Ignora maiúsculas/minúsculas.
 
-**Exemplo:**
-```python
-eh_palindromo("Ame a ema")  # True
-eh_palindromo("Python")     # False
+📄 Arquivo: [`contar_vogais.py`](contar_vogais.py)
 
-```
 ---
 
-## 🧪 Teste 2 – Contador de Vogais
+### 🧪 3. Soma de Números Pares
 
-**Função esperada:** `contar_vogais(frase)`
+**Função:** `soma_pares(lista)`
 
-### 📝 Descrição:
-Crie uma função que receba uma string e retorne o número de vogais (`a`, `e`, `i`, `o`, `u`) contidas nela, **ignorando maiúsculas e minúsculas**.
+Recebe uma lista de números inteiros e retorna a soma apenas dos números pares.
 
-### 🔧 Requisitos:
-- Ignorar letras maiúsculas.
-- Considerar apenas as vogais `a`, `e`, `i`, `o`, `u`.
-- Usar laço de repetição e estrutura condicional.
+📄 Arquivo: [`soma_numeros_pares.py`](soma_numeros_pares.py)
 
-### 💡 Exemplo de uso:
-```python
-contar_vogais("Brasil é incrível")  # 6
-contar_vogais("Python")              # 1
-```
 ---
 
-## 🧪 Teste 3 – Soma de Números Pares
+### 🧪 4. FizzBuzz
 
-**Função esperada:** `soma_pares(lista)`
+**Função:** `multiplos()`
 
-### 📝 Descrição:
-Crie uma função que receba uma **lista de números inteiros** e retorne a **soma apenas dos números pares**.
+Imprime números de 1 a 50, substituindo múltiplos de 3 por “Fizz”, de 5 por “Buzz” e de ambos por “FizzBuzz”.
 
-### 🔧 Requisitos:
-- Usar laço de repetição (`for` ou `while`).
-- Verificar se o número é par usando a condição: `numero % 2 == 0`.
-- Somar apenas os valores pares da lista.
-- Retornar o total da soma.
+📄 Arquivo: [`fizzbuzz.py`](fizzbuzz.py)
 
-### 💡 Exemplo de uso:
-```python
-soma_pares([1, 2, 3, 4, 5, 6])   # 12
-soma_pares([10, 15, 22, 33])     # 32
-soma_pares([])                   # 0
-soma_pares([1, 3, 5, 7])         # 0
-```
 ---
 
-## 🧪 Teste 4 – FizzBuzz
+### 🧪 5. Ordenação Manual (Bubble Sort)
 
-**Função esperada:** `fizzbuzz()`
+**Função:** `ordenacao()`
 
-### 📝 Descrição:
-Implemente a lógica clássica do FizzBuzz, imprimindo os números de 1 a 50 com as seguintes condições:
+Implementa a lógica do algoritmo Bubble Sort para ordenar uma lista de inteiros em ordem crescente.
 
-- Para múltiplos de **3**, imprimir `"Fizz"`.
-- Para múltiplos de **5**, imprimir `"Buzz"`.
-- Para múltiplos de **3 e 5**, imprimir `"FizzBuzz"`.
-- Caso contrário, imprimir o número normalmente.
+📄 Arquivo: [`bubble_sorte.py`](bubble_sorte.py)
 
-### 🔧 Requisitos:
-- Usar um laço `for` que percorra os números de 1 até 50.
-- Utilizar estruturas condicionais (`if`, `elif`, `else`) para tratar os diferentes casos.
-- Imprimir os resultados diretamente no terminal com `print()`.
+---
 
-### 💡 Exemplo de saída:
-1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz ...
+## 🧰 Requisitos
 
-## 🧪 Teste 5 – Ordenação Manual (Bubble Sort)
+- Python 3.x instalado
+- Não foram utilizadas bibliotecas externas, conforme instruções.
 
-**Função esperada:** `ordenar(lista)`
+---
 
-### 📝 Descrição:
-Crie uma função que receba uma **lista de números inteiros** e a retorne em **ordem crescente**, **sem utilizar as funções `sort()` ou `sorted()` do Python**.
+## 🚀 Execução
 
-Este exercício tem como objetivo testar a capacidade de implementar lógica de ordenação manual, utilizando um algoritmo simples como o **Bubble Sort**.
+Você pode rodar cada arquivo individualmente com:
 
-### 🔧 Requisitos:
-- Implementar um algoritmo de ordenação (preferencialmente Bubble Sort).
-- Não utilizar funções prontas de ordenação.
-- Retornar a **lista ordenada**.
-- Tratar listas vazias ou com um único elemento.
-
-### 💡 Exemplo de uso:
-```python
-ordenar([3, 1, 4, 2])        # [1, 2, 3, 4]
-ordenar([10, 5, 2, 8, 7])    # [2, 5, 7, 8, 10]
-ordenar([])                  # []
-ordenar([42])                # [42]
-
-```
-
-## Entrega:
-
-- Faça um git clone desse repositorio para a realização dos testes
-- Os testes devem ser entregues via Push request nesse mesmo repositorio até o dia 14/04
-- Organize os diretorios de forma clara
-- Utilize todo o seu conhecimento em programacao, clean code, arquitetura, git e logica de programacao
-- Sera avaliado seu codigo em python, suas habilidades de git, clean code e arquitetura
-- Referencia: https://www.python.org/
+```bash
+python nome_do_arquivo.py
